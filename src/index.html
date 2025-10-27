@@ -1,13 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Client</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
+<h2>Register</h2>
+<form (ngSubmit)="onRegister()" #regForm="ngForm">
+  <input name="username" [(ngModel)]="register.username" placeholder="username" required />
+  <input name="email" [(ngModel)]="register.email" placeholder="email" required />
+  <input type="password" name="password" [(ngModel)]="register.password" placeholder="password" required />
+  <button type="submit">Register</button>
+</form>
+
+<h2>Login</h2>
+<form (ngSubmit)="onLogin()" #loginForm="ngForm">
+  <input name="username" [(ngModel)]="login.username" placeholder="username" required />
+  <input type="password" name="password" [(ngModel)]="login.password" placeholder="password" required />
+  <button type="submit">Login</button>
+</form>
+
+<div *ngIf="message">{{ message }}</div>
