@@ -3,7 +3,8 @@ import { AuthService } from '../../service/auth';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html'
+  templateUrl: './auth.html'
+
 })
 export class AuthComponent {
   register = { username: '', email: '', password: '' };
